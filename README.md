@@ -8,7 +8,8 @@ functions
 
 something like this
 
-'''bash
+'''
+bash
 curl -X 'POST' \
   'https://theophige-zany-orbit-vq6v7w67xr62pv4j-8080.preview.app.github.dev/wiki' \
   -H 'accept: application/json' \
@@ -17,6 +18,7 @@ curl -X 'POST' \
   "name": "facebook",
   "length": 3
 }'
+
 '''
 
 ### build container
