@@ -5,9 +5,9 @@ import click
 @click.option('--name',
                 help= 'Web page we want to scrape')
 @click.option('--length',
-                help= 'length')
+            help= 'length', type=int)
 def cli(name, length):
-    result = scrape(name, length= length)
+    result = scrape(name= name, length= length)
     click.echo(click.style(f"{result}", fg="blue"))
 
 if __name__ == '__main__':
