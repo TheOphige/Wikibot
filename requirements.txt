@@ -4,3 +4,6 @@ black
 wikipedia
 click
 fire
+uvicorn
+fastapi
+pydantic
