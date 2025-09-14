@@ -1,16 +1,18 @@
-# functions-from-zero
-functions
+# Wikibot
 
-[![Python application test with Github Actions](https://github.com/TheOphige/functions-from-zero/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/TheOphige/functions-from-zero/actions/workflows/main.yml)
+A CLI tool and API to scrape Wikipedia, deployed on AWS.
 
+[![Python application test with Github Actions](https://github.com/TheOphige/Wikibot/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/TheOphige/Wikibot/actions/workflows/main.yml)
 
-### To call Microservice
+---
 
-something like this
+## Usage
 
-'''
+### Calling the Microservice
 
-bash
+You can send a POST request to the deployed endpoint:
+
+```bash
 curl -X 'POST' \
   'https://theophige-zany-orbit-vq6v7w67xr62pv4j-8080.preview.app.github.dev/wiki' \
   -H 'accept: application/json' \
@@ -19,17 +21,25 @@ curl -X 'POST' \
   "name": "facebook",
   "length": 3
 }'
+```
 
-'''
+### Build the Container
 
-### build container
+```bash
+docker build -t wikibot .
+docker image ls
+```
 
-'docker build .'
-'docker image ls'
+### Run the Container
 
-### Run container
-'docker run -p 127.0.0.1:8080:8080 5e65a84f2e1a'
+```bash
+docker run -p 127.0.0.1:8080:8080 wikibot
+```
 
-### Invoke POST request
+### Invoke POST Request Locally
 
-run 'invoke.sh'
+You can use the provided helper script:
+
+```bash
+./invoke.sh
+```
